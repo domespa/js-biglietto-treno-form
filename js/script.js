@@ -5,6 +5,9 @@ const ticketElm = document.getElementById("ticket");
 const fullNameElm = document.getElementById("full-name");
 const kmsElm = document.getElementById("kms");
 const ageElm = document.getElementById("age");
+const submitElm = document.getElementById("submit")
+const resetElm = document.getElementById("reset")
+const tickSectElm = document.getElementById("tick-sect")
 
 // CARD
 const ticketNameElm = document.getElementById("ticket-name");
@@ -14,6 +17,13 @@ const ticketCodeElm = document.getElementById("ticket-code");
 const ticketPriceElm = document.getElementById("ticket-price");
 
 // DOM EVENTS
+submitElm.addEventListener("click", function() {
+    tickSectElm.classList.remove("d-none")
+});
+resetElm.addEventListener("click", function() {
+    tickSectElm.classList.add("d-none")
+});
+
 ticketElm.addEventListener("submit", function(event) {
 event.preventDefault();
 
@@ -45,4 +55,5 @@ ticketTypeElm.innerHTML = ticketType;
 ticketSideElm.innerHTML = ticketSide;  
 ticketCodeElm.innerHTML = ticketCode;
 ticketPriceElm.innerHTML = `€ ${finalPrice.toFixed(2)}`;
+
 });
