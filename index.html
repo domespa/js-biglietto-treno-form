@@ -9,20 +9,21 @@
 </head>
 <body class="bg-danger">
     <h2 class="text-center pt-2 pb-2 text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-    <form id="ticket" class="container bg-white mt-5 rounded">
+        <!-- FORM -->
+    <form id="ticket" action="" class="container bg-white mt-5 rounded">
         <div>
             <div class="row g-5">
                 <div class="col">
                     <p class="text-center">Nome Cognome</p>
-                    <input type="text" class="form-control" placeholder="FullName" aria-label="FullName" id="full-name">
+                    <input type="text" class="form-control" placeholder="FullName" aria-label="FullName" id="full-name" required />
                 </div>
                 <div class="col">
                     <p class="text-center">Km da percorrere</p>
-                    <input type="text" class="form-control" placeholder="Kms" aria-label="Kms" id="kms">
+                    <input type="text" class="form-control" placeholder="Kms" aria-label="Kms" id="kms" required />
                 </div>
                 <div class="col">
                     <p class="text-center">Fascia di età</p>
-                    <select class="form-select" aria-label="Default select example" id="age">
+                    <select class="form-select" aria-label="Default select example" id="age" required >
                         <option selected>Seleziona la tua età</option>
                         <option value="1">Minorenne</option>
                         <option value="2">Maggiorenne</option>
@@ -31,11 +32,14 @@
                   </div>
               </div>
             <div class="d-flex justify-content-center pt-5 pb-3 gap-3">
-                <button type="submit" id="button" class="btn btn-secondary text-danger bg-secondary-subtle border-0">Genera</button>
+                <button type="submit" id="submit" class="btn btn-secondary text-danger bg-secondary-subtle border-0">Genera</button>
                 <button type="reset" id="reset" class="btn btn-secondary text-danger bg-secondary-subtle border-0">Annulla</button>
             </div>
         </div>
     </form>
+        <!-- /FORM -->
+
+        <!-- TICKET -->
     <section>
         <h2 class="text-center pt-4 text-white">IL TUO BIGLIETTO</h2>
         <div id="ticket-container" class="container bg-white pb-4">
@@ -64,7 +68,7 @@
             </div>
         </div>
      </section>    
-
+        <!-- /TICKET -->
     <script src="js/script.js"></script>
 </body>
 </html>
